@@ -92,7 +92,7 @@ const HomePage = () => {
               <span className="bg-gradient-to-r font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">YouDesign</span> makes it simple to build, update, and launch your site. Fully integrated with various tools to boost your productivity.
             </p>
             <blockquote className="italic text-gray-500 mb-4">
-              "YouDesign has completely transformed how we manage our sites!" -James Dean, CTO, Panda
+              &quot;YouDesign has completely transformed how we manage our sites!&quot; - James Dean, CTO, Panda
             </blockquote>
           </motion.div>
         </div>
