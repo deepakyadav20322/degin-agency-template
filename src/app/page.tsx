@@ -1,101 +1,150 @@
-import Image from "next/image";
-
+'use client'
+import React from "react";
+import HomePage from "@/components/home";
+import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <div className="bg-white min-h-screen flex flex-col items-center">
+          {/* Header */}
+          <header className="w-full flex justify-between items-center p-6">
+            <div className="text-lg font-bold border-b-4 border-2 border-black p-1 rounded-md">designYou</div>
+            <div>
+              <button className="mr-4 border-2 border-black px-3 py-1 text-center rounded-3xl">Sign in</button>
+              <button className="bg-black text-white py-2 px-4 rounded-full">
+                Sign up <span className="ml-2">→</span>
+              </button>
+            </div>
+          </header>
+    
+          {/* Main Section */}
+          <main className="flex flex-col items-center text-center mt-10 px-4">
+            <div className="flex flex-col justify-center items-center">
+            <h1 className="text-7xl font-bold">
+              Make your designs
+            </h1>
+            <h1 className="bg-gradient-to-r text-7xl font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">
+            wonderful
+          </h1>
+            </div>
+           
+            <p className="text-gray-500 mt-4 max-w-md">
+              Our landing page template works on all devices, so you only have to
+              set it up once and get beautiful results forever.
+            </p>
+    
+            {/* Call to Action Buttons */}
+            <div className="mt-8">
+              <button className="bg-blue-600 hover:bg-blue-500 transition-all duration-100 text-white py-3 px-6 rounded-full mr-4">
+                Start free trial
+              </button>
+              <button className="border border-black py-3 px-6 rounded-full hover:bg-neutral-100 transition-all duration-100">
+                Learn more
+              </button>
+            </div>
+    
+            {/* Image and Video Section */}
+            <motion.div className="mt-12 relative"
+             initial={{ opacity: 0, y: 50 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             
+             transition={{ duration: 0.8, delay: 1 * 0.3 }}
+            >
+              <video
+              autoPlay={true}
+              controls={false}
+              loop={true}
+              muted={true}
+              className="w-full max-w-xl rounded-lg shadow-lg"
+              >
+ 
+              <source src="demo.mp4" type="video/mp4"/>
+              </video>
+               
+        
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+       
+ {/* {bubble section ---} */}
+              <div className="hidden md:absolute  -bottom-6 left-1/2 transform -translate-x-1/2 bg-white py-2 px-4 rounded-full shadow-md">
+                <button className="flex flex-row items-center">
+                  <img src="/play.png" className="material-icons mr-2 w-6"/>
+                  Watch full video (1 min)
+                </button>
+              </div>
+            </motion.div>
+          </main>
+
+          {/* ------------------------------------------------4 */}
+    
+
+          <motion.div className="relative min-h-[20rem] w-full max-w-7xl rounded-xl m-auto flex justify-center items-center bg-gradient-to-br from-blue-500  to-teal-400 my-14"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            
+            transition={{ duration: 0.6, delay: 1 * 0.1 }}
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Overlay to make text more readable */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      {/* Main Content */}
+      <div className="relative z-10 text-center text-white px-6">
+        <h1 className="text-5xl font-bold mb-4">Next.js + Tailwind Template</h1>
+        <p className="text-lg mb-6">
+          If the header and footer look like the screenshots in <code>src/assets/img</code>, Tailwind is set up and you can start coding.
+        </p>
+
+        {/* Language Buttons */}
+        <div className="space-x-4">
+          <button className="text-white text-black py-2 px-6 rounded-md bg-black">Design</button>
+          <button className="bg-white text-black py-2 px-6 rounded-md">Publish</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+    </motion.div>
+
+          {/* ------------------------------------------------4 */}
+
+          
+   <HomePage/>
+
+
+
+         
+
+
+
+          {/* Footer */}
+         
+<footer className="bg-neutral-100 border-t-gray-300 text-black py-8 w-full mt-6">
+  <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+ 
+    <div className="mb-4 md:mb-0">
+      <h1 className="text-2xl font-bold">YouDesign</h1>
     </div>
-  );
-}
+
+  
+    <ul className="flex space-x-6 mb-4 md:mb-0">
+      <li><a href="#" className="hover:text-gray-400 hover:border-black hover:border-b-[1px]">Home</a></li>
+      <li><a href="#" className="hover:text-gray-400 hover:border-black hover:border-b-[1px]">About</a></li>
+      <li><a href="#" className="hover:text-gray-400 hover:border-black hover:border-b-[1px]">Services</a></li>
+      <li><a href="#" className="hover:text-gray-400 hover:border-black hover:border-b-[1px]">Contact</a></li>
+    </ul>
+
+    {/* <!-- Social Media Links --> */}
+    <div className="flex space-x-6">
+      <a href="#" className="hover:text-gray-400">Facebook</a>
+      <a href="#" className="hover:text-gray-400">Twitter</a>
+      <a href="#" className="hover:text-gray-400">LinkedIn</a>
+    </div>
+  </div>
+
+ 
+  <div className="mt-6 text-center text-gray-400">
+    <p>&copy; 2024 YouDesign. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+      );
+};
+
