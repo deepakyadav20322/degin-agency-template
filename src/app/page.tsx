@@ -96,7 +96,7 @@ export default function Home() {
 
         {/* Language Buttons */}
         <div className="space-x-4">
-          <button className="text-white text-black py-2 px-6 rounded-md bg-black">Design</button>
+          <button className="text-white py-2 px-6 rounded-md bg-black">Design</button>
           <button className="bg-white text-black py-2 px-6 rounded-md">Publish</button>
         </div>
       </div>
@@ -140,7 +140,7 @@ export default function Home() {
 
  
   <div className="mt-6 text-center text-gray-400">
-    <p>&copy; 2024 YouDesign. All rights reserved.</p>
+    <p>© 2024 YouDesign. All rights reserved.</p>
   </div>
 </footer>
 
