@@ -30,7 +30,7 @@ const HomePage = () => {
         variants={sectionVariant}
       >
         <div className="container mx-auto text-center">
-          <motion.h2 className="text-3xl font-semibold mb-8" variants={textVariant}>
+          <motion.h2 className="text-3xl font-semibold mb-12" variants={textVariant}>
             <span className="bg-gradient-to-r font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">YouDesign</span> brings all your creativity together
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -87,7 +87,7 @@ const HomePage = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-semibold mb-6">Build anything, anytime!</h2>
+            <h2 className="text-4xl font-semibold mb-6">Build anything, anytime!</h2>
             <p className="text-lg mb-6">
               <span className="bg-gradient-to-r font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">YouDesign</span> makes it simple to build, update, and launch your site. Fully integrated with various tools to boost your productivity.
             </p>
@@ -107,8 +107,8 @@ const HomePage = () => {
         variants={sectionVariant}
       >
         <div className="container mx-auto text-center">
-          <motion.h2 className="text-3xl font-semibold mb-8" variants={textVariant}>
-            How YouDesign works for you?
+          <motion.h2 className="text-4xl font-semibold mb-12" variants={textVariant}>
+            How  <span className="bg-gradient-to-r font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">YouDesign</span> works for you?
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

@@ -4,10 +4,17 @@ import HomePage from "@/components/home";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
-        <div className="bg-white min-h-screen flex flex-col items-center">
+        <div className="bg-white min-h-screen flex flex-col items-center relative">
+          <img src="/download.png" className="absolute top-[15%] left-[7rem] arrow" alt="" />
+          <img src="/download (1).png" className="absolute top-[15%] right-[7rem] arrow transform rotate-90" alt="" />
+          <div className="bubble hidden  b_two w-8 h-8 lg:block absolute rounded-full top-[20%] left-[155px]"></div>
+          <div className="bubble hidden bg-[#ff9398]  b_one w-8 h-8 lg:block absolute rounded-full top-[20%] right-[155px]"></div>
+          <div className="bubble hidden bg-[#ff9398]  b_two w-3 h-3 lg:block absolute rounded-full top-[15%] left-[230px]"></div>
+          <div className="bubble hidden bg-[#ff9398]  b_one w-3 h-3 lg:block absolute rounded-full top-[15%] right-[250px]"></div>
+          
           {/* Header */}
           <header className="w-full flex justify-between items-center p-6">
-            <div className="text-lg font-bold border-b-4 border-2 border-black p-1 rounded-md">designYou</div>
+            <div className="text-lg font-bold border-b-4 border-2 border-black p-1 rounded-md">YouDesign</div>
             <div>
               <button className="mr-4 border-2 border-black px-3 py-1 text-center rounded-3xl">Sign in</button>
               <button className="bg-black text-white py-2 px-4 rounded-full">
@@ -19,10 +26,10 @@ export default function Home() {
           {/* Main Section */}
           <main className="flex flex-col items-center text-center mt-10 px-4">
             <div className="flex flex-col justify-center items-center">
-            <h1 className="text-7xl font-bold">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
               Make your designs
             </h1>
-            <h1 className="bg-gradient-to-r text-7xl font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">
+            <h1 className="bg-gradient-to-r text-5xl sm:text-6xl lg:text-7xl font-bold from-blue-500 to-teal-400 bg-clip-text text-transparent">
             wonderful
           </h1>
             </div>
@@ -48,7 +55,7 @@ export default function Home() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              
-             transition={{ duration: 0.8, delay: 1 * 0.3 }}
+             transition={{ duration: 0.8, delay: 1 * 0.1 }}
             >
               <video
               autoPlay={true}
@@ -77,7 +84,7 @@ export default function Home() {
           {/* ------------------------------------------------4 */}
     
 
-          <motion.div className="relative min-h-[20rem] w-full max-w-7xl rounded-xl m-auto flex justify-center items-center bg-gradient-to-br from-blue-500  to-teal-400 my-14"
+          <motion.div className="relative min-h-[20rem] w-full max-w-7xl rounded-xl m-auto flex justify-center items-center bg-gradient-to-br from-blue-500  to-teal-400 my-14 py-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
