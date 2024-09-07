@@ -122,7 +122,7 @@ export default function Home() {
 
           {/* Footer */}
          
-<footer className="bg-neutral-100 border-t-gray-300 text-black py-8 w-full mt-6">
+<footer className="bg-neutral-100 border-t-gray-300 text-black py-8 w-full mt-6 px-2 md:px-6">
   <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
  
     <div className="mb-4 md:mb-0">
